@@ -1,0 +1,433 @@
+@import "tailwindcss" source(none);
+@source "../src";
+
+/*
+ * Suspicious Transaction Detection System — design system.
+ * All values below are the supplied design tokens. Do not introduce
+ * arbitrary colors, spacing, radii or button heights.
+ */
+
+:root {
+  color-scheme: dark;
+  /* Palette */
+  --palette-purple-99: #eeeafd;
+  --palette-purple-95: #ddd5fb;
+  --palette-purple-90: #ccc0f9;
+  --palette-purple-80: #aa97f6;
+  --palette-purple-70: #876df2;
+  --palette-purple-60: #6543ee;
+  --palette-purple-50: #542eec;
+  --palette-purple-40: #4325bd;
+  --palette-purple-30: #321c8e;
+  --palette-purple-20: #22125e;
+  --palette-purple-10: #11092f;
+
+  --palette-green-99: #e9f7f1;
+  --palette-green-95: #d2efe3;
+  --palette-green-90: #a5dfc8;
+  --palette-green-80: #78cfac;
+  --palette-green-70: #4bbf91;
+  --palette-green-60: #35b783;
+  --palette-green-50: #1eaf75;
+  --palette-green-40: #1b9e69;
+  --palette-green-30: #126946;
+  --palette-green-20: #062317;
+  --palette-green-10: #03110c;
+
+  --palette-blue-99: #f7faff;
+  --palette-blue-95: #e9f3ff;
+  --palette-blue-90: #d3e8ff;
+  --palette-blue-80: #a7d0ff;
+  --palette-blue-70: #6eb1ff;
+  --palette-blue-60: #2d93f3;
+  --palette-blue-50: #0076d6;
+  --palette-blue-40: #0065ba;
+  --palette-blue-30: #00508f;
+  --palette-blue-20: #003865;
+  --palette-blue-10: #001c37;
+
+  --palette-red-99: #feecec;
+  --palette-red-95: #fdd8d8;
+  --palette-red-90: #fcb2b2;
+  --palette-red-80: #fa8b8b;
+  --palette-red-70: #f96565;
+  --palette-red-60: #f85151;
+  --palette-red-50: #f73e3e;
+  --palette-red-40: #c63232;
+  --palette-red-30: #7c1f1f;
+  --palette-red-20: #310c0c;
+  --palette-red-10: #190606;
+
+  --palette-yellow-99: #fbf5e6;
+  --palette-yellow-95: #f7ebcc;
+  --palette-yellow-90: #f0d799;
+  --palette-yellow-80: #e8c466;
+  --palette-yellow-70: #e1b033;
+  --palette-yellow-60: #dda61a;
+  --palette-yellow-50: #d99c00;
+  --palette-yellow-40: #ae7d00;
+  --palette-yellow-30: #825e00;
+  --palette-yellow-20: #412f00;
+  --palette-yellow-10: #161000;
+
+  --palette-thunder-10: #101013;
+  --palette-thunder-20: #151519;
+  --palette-thunder-30: #1b1b23;
+  --palette-thunder-40: #1c1c21;
+  --palette-thunder-50: #1e1e24;
+  --palette-thunder-60: #2a2a32;
+  --palette-thunder-70: #505050;
+  --palette-thunder-75: #414458;
+  --palette-thunder-80: #6c7293;
+  --palette-thunder-90: #818ead;
+  --palette-thunder-95: #adadc9;
+  --palette-thunder-99: #ebebeb;
+
+  --palette-black-0: #000000;
+  --palette-white-99: #ffffff;
+
+  /* Semantic */
+  --semantic-primary-default: #6b4fc8;
+  --semantic-primary-selected: #b5a3f5;
+  --semantic-primary-hover: #563bad;
+
+  --semantic-disabled: #22232a;
+  --semantic-outline: #5e6070;
+
+  --semantic-success-default: #3dd6a0;
+  --semantic-success-selected: #83f0c8;
+  --semantic-success-hover: #24ab7d;
+
+  /* Keep destructive actions unmistakably red on dark surfaces. */
+  --semantic-danger-default: #f73e3e;
+  --semantic-danger-selected: #f96565;
+  --semantic-danger-hover: #c63232;
+
+  --semantic-yellow-default: #f5c45b;
+  --semantic-yellow-selected: #ffe09a;
+  --semantic-yellow-hover: #d59b2e;
+
+  --semantic-bg-primary: #000000;
+  --semantic-bg-secondary: #0b0b0e;
+  --semantic-bg-secondary-selected: #17171d;
+  --semantic-bg-outline: #2b2b34;
+  --semantic-bg-overlay: #000000;
+  --semantic-button-outline: #b5a3f5;
+  --semantic-outline-hover-bg: #231b42;
+  --semantic-field-active-border: #9a80e4;
+  --semantic-field-active-bg: #14111d;
+  --semantic-surface-shadow: rgba(0, 0, 0, 0.62);
+
+  --semantic-text-primary: #a7a7b2;
+  --semantic-text-secondary: #fafaff;
+  --semantic-text-selected: #e5e5ed;
+  --semantic-text-disabled: #6d6d7b;
+  --semantic-text-on-accent: #ffffff;
+
+  /* Tonal surfaces used by badges in dark mode. */
+  --palette-purple-20: #1b1731;
+  --palette-green-20: #102e28;
+  --palette-red-20: #361b24;
+  --palette-yellow-20: #382d12;
+
+  /* Radii */
+  --radius-none: 0px;
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-round: 100px;
+
+  /* Spacing */
+  --spacing-xs: 0px;
+  --spacing-s: 1px;
+  --spacing-sm: 2px;
+  --spacing-md: 4px;
+  --spacing-lg: 6px;
+  --spacing-2xl: 8px;
+  --spacing-3xl: 10px;
+  --spacing-4xl: 12px;
+  --spacing-5xl: 16px;
+  --spacing-6xl: 20px;
+  --spacing-7xl: 24px;
+  --spacing-8xl: 32px;
+  --spacing-9xl: 40px;
+  --spacing-10xl: 42px;
+  --spacing-11xl: 46px;
+  --spacing-12xl: 48px;
+  --spacing-13xl: 64px;
+  --spacing-14xl: 80px;
+  --spacing-15xl: 96px;
+  --spacing-16xl: 112px;
+  --spacing-17xl: 128px;
+
+  --spacing-rec-widget: 7px;
+  --spacing-list: 10px;
+  --spacing-cam-menu: 30px;
+  --spacing-case: 35px;
+  --spacing-nav-btn: 60px;
+
+  /* Button heights */
+  --button-height-small: 38px;
+  --button-height-medium: 44px;
+  --button-height-large: 52px;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* Supplied light palette */
+  --palette-purple-99: #11092f;
+  --palette-purple-95: #22125e;
+  --palette-purple-90: #321c8e;
+  --palette-purple-80: #4325bd;
+  --palette-purple-70: #542eec;
+  --palette-purple-60: #6543ee;
+  --palette-purple-50: #876df2;
+  --palette-purple-40: #aa97f6;
+  --palette-purple-30: #ccc0f9;
+  --palette-purple-20: #fff0ef;
+  --palette-purple-10: #eeeafd;
+
+  --palette-blue-99: #11092f;
+  --palette-blue-95: #22125e;
+  --palette-blue-90: #321c8e;
+  --palette-blue-80: #4325bd;
+  --palette-blue-70: #542eec;
+  --palette-blue-60: #6543ee;
+  --palette-blue-50: #876df2;
+  --palette-blue-40: #aa97f6;
+  --palette-blue-30: #ccc0f9;
+  --palette-blue-20: #ddd5fb;
+  --palette-blue-10: #eeeafd;
+
+  --palette-green-99: #03110c;
+  --palette-green-95: #062317;
+  --palette-green-90: #126946;
+  --palette-green-80: #1b9e69;
+  --palette-green-70: #1eaf75;
+  --palette-green-60: #35b783;
+  --palette-green-50: #4bbf91;
+  --palette-green-40: #78cfac;
+  --palette-green-30: #a5dfc8;
+  --palette-green-20: #dff4eb;
+  --palette-green-10: #e9f7f1;
+
+  --palette-red-99: #190606;
+  --palette-red-95: #310c0c;
+  --palette-red-90: #7c1f1f;
+  --palette-red-80: #c63232;
+  --palette-red-70: #f73e3e;
+  --palette-red-60: #f85151;
+  --palette-red-50: #f96565;
+  --palette-red-40: #fa8b8b;
+  --palette-red-30: #fcb2b2;
+  --palette-red-20: #fde8e6;
+  --palette-red-10: #feecec;
+
+  --palette-yellow-99: #161000;
+  --palette-yellow-95: #412f00;
+  --palette-yellow-90: #825e00;
+  --palette-yellow-80: #ae7d00;
+  --palette-yellow-70: #d99c00;
+  --palette-yellow-60: #dda61a;
+  --palette-yellow-50: #e1b033;
+  --palette-yellow-40: #e8c466;
+  --palette-yellow-30: #f0d799;
+  --palette-yellow-20: #fff3cf;
+  --palette-yellow-10: #fbf5e6;
+
+  --palette-thunder-10: #ebebeb;
+  --palette-thunder-20: #adadc9;
+  --palette-thunder-30: #818ead;
+  --palette-thunder-40: #6c7293;
+  --palette-thunder-50: #414458;
+  --palette-thunder-60: #505050;
+  --palette-thunder-70: #2a2a32;
+  --palette-thunder-75: #1e1e24;
+  --palette-thunder-80: #1c1c21;
+  --palette-thunder-90: #1b1b23;
+  --palette-thunder-95: #151519;
+  --palette-thunder-99: #101013;
+
+  --semantic-primary-default: #d53228;
+  --semantic-primary-selected: #b6271e;
+  --semantic-primary-hover: #b92a21;
+
+  --semantic-bg-primary: #f4f6f9;
+  --semantic-bg-secondary: #ffffff;
+  --semantic-bg-secondary-selected: #eef2f6;
+  --semantic-bg-outline: #d5dde7;
+  --semantic-bg-overlay: rgba(13, 27, 42, 0.58);
+
+  --semantic-text-primary: #637083;
+  --semantic-text-secondary: #17212f;
+  --semantic-text-selected: #344054;
+  --semantic-text-disabled: #929eae;
+  --semantic-text-on-accent: #ffffff;
+
+  --semantic-success-default: #14795a;
+  --semantic-success-selected: #dcf5eb;
+  --semantic-success-hover: #0f6248;
+  --semantic-danger-default: #d53228;
+  --semantic-danger-selected: #fee9e7;
+  --semantic-danger-hover: #a9251e;
+  --semantic-yellow-default: #b7791f;
+  --semantic-yellow-selected: #fff2cc;
+  --semantic-yellow-hover: #8f5d19;
+
+  --semantic-disabled: #e8edf2;
+  --semantic-outline: #a6b5c5;
+  --semantic-button-outline: #d53228;
+  --semantic-outline-hover-bg: #fff0ef;
+  --semantic-field-active-border: #d53228;
+  --semantic-field-active-bg: #fffafa;
+  --semantic-surface-shadow: rgba(15, 23, 42, 0.055);
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+}
+
+@theme inline {
+  --color-primary: var(--semantic-primary-default);
+  --color-primary-selected: var(--semantic-primary-selected);
+  --color-primary-hover: var(--semantic-primary-hover);
+  --color-success: var(--semantic-success-default);
+  --color-success-selected: var(--semantic-success-selected);
+  --color-success-hover: var(--semantic-success-hover);
+  --color-danger: var(--semantic-danger-default);
+  --color-danger-selected: var(--semantic-danger-selected);
+  --color-danger-hover: var(--semantic-danger-hover);
+  --color-warn: var(--semantic-yellow-default);
+  --color-warn-selected: var(--semantic-yellow-selected);
+  --color-warn-hover: var(--semantic-yellow-hover);
+  --color-bg-primary: var(--semantic-bg-primary);
+  --color-bg-secondary: var(--semantic-bg-secondary);
+  --color-bg-secondary-selected: var(--semantic-bg-secondary-selected);
+  --color-bg-outline: var(--semantic-bg-outline);
+  --color-outline: var(--semantic-outline);
+  --color-disabled: var(--semantic-disabled);
+  --color-text-primary: var(--semantic-text-primary);
+  --color-text-secondary: var(--semantic-text-secondary);
+  --color-text-selected: var(--semantic-text-selected);
+  --color-text-disabled: var(--semantic-text-disabled);
+
+  /* Shared shadcn/Tailwind component colors */
+  --color-background: var(--semantic-bg-primary);
+  --color-foreground: var(--semantic-text-secondary);
+  --color-card: var(--semantic-bg-secondary);
+  --color-card-foreground: var(--semantic-text-secondary);
+  --color-popover: var(--semantic-bg-secondary);
+  --color-popover-foreground: var(--semantic-text-secondary);
+  --color-primary-foreground: var(--semantic-text-on-accent);
+  --color-secondary: var(--semantic-bg-secondary-selected);
+  --color-secondary-foreground: var(--semantic-text-secondary);
+  --color-muted: var(--semantic-bg-secondary-selected);
+  --color-muted-foreground: var(--semantic-text-primary);
+  --color-accent: var(--semantic-bg-secondary-selected);
+  --color-accent-foreground: var(--semantic-text-selected);
+  --color-destructive: var(--semantic-danger-default);
+  --color-destructive-foreground: var(--semantic-text-on-accent);
+  --color-border: var(--semantic-bg-outline);
+  --color-input: var(--semantic-bg-outline);
+  --color-ring: var(--semantic-primary-selected);
+
+  --radius-xs: var(--radius-xs);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-round: var(--radius-round);
+
+  --spacing-2xl: var(--spacing-2xl);
+  --spacing-3xl: var(--spacing-3xl);
+  --spacing-4xl: var(--spacing-4xl);
+  --spacing-5xl: var(--spacing-5xl);
+  --spacing-6xl: var(--spacing-6xl);
+  --spacing-7xl: var(--spacing-7xl);
+  --spacing-8xl: var(--spacing-8xl);
+  --spacing-9xl: var(--spacing-9xl);
+  --spacing-12xl: var(--spacing-12xl);
+  --spacing-13xl: var(--spacing-13xl);
+}
+
+@layer base {
+  * {
+    border-color: var(--semantic-bg-outline);
+  }
+
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+    background-color: var(--semantic-bg-primary);
+    color: var(--semantic-text-secondary);
+    font-family:
+      "Inter",
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      sans-serif;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--semantic-primary-selected);
+    outline-offset: 2px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--semantic-bg-secondary-selected);
+    border-radius: var(--radius-round);
+  }
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-bar-content:has(> .filter-text-input) {
+  justify-content: flex-start;
+}
+
+.filter-bar-content > .filter-text-input + :not(.filter-text-input) {
+  margin-left: auto;
+}
+
+.select-item[data-highlighted] {
+  background-color: var(--semantic-bg-secondary-selected);
+  color: var(--semantic-text-secondary);
+}
+
+.select-item[data-state="checked"] {
+  background-color: var(--semantic-button-outline);
+  color: var(--semantic-text-on-accent);
+}
+
+@utility surface {
+  background-color: var(--semantic-bg-secondary);
+  border: 1px solid var(--semantic-bg-outline);
+  border-radius: var(--radius-lg);
+}
+
+@utility muted-text {
+  color: var(--semantic-text-primary);
+}
